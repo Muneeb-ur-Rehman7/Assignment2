@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Form Assignment</title>
+  <style>
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px solid #333;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Assignment: HTML Form with Validations</h2>
+  <form>
+
+    <!-- Bio Data -->
+    <fieldset>
+      <legend>Bio Data</legend>
+
+      <label>Name:
+        <input type="text" name="name" required>
+      </label>
+
+      <label>Password:
+        <input type="password" name="password" minlength="5" maxlength="10" required>
+      </label>
+
+      <label>Date of Birth:
+        <input type="date" name="dob" required>
+      </label>
+
+      <label>Profile Pic:
+        <input type="file" name="profilepic">
+      </label>
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+
+      <label>Nationality:
+        <select name="nationality" required>
+          <option value="">Select</option>
+          <option value="Pakistani">Pakistani</option>
+          <option value="Indian">Indian</option>
+          <option value="American">American</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+
+      <label>City:
+        <select name="city" required>
+          <option value="">Select</option>
+          <option value="Karachi">Karachi</option>
+          <option value="Lahore">Lahore</option>
+          <option value="Islamabad">Islamabad</option>
+          <option value="Hyderabad">Hyderabad</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <!-- Professional Experience -->
+    <fieldset>
+      <legend>Professional Experience</legend>
+
+      <label>Total Professional Experience (Years):
+        <input type="number" name="experience" min="5" required>
+      </label>
+
+      <label>Qualification:
+        <select name="qualification" required>
+          <option value="">Select</option>
+          <option value="Matric">Matric</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Bachelor">Bachelor</option>
+          <option value="Master">Master</option>
+          <option value="PhD">PhD</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <!-- Other Details -->
+    <fieldset>
+      <legend>Other Details</legend>
+
+      <label>Favourite Subjects:
+        <select name="subjects" multiple required>
+          <option value="Math">Math</option>
+          <option value="Physics">Physics</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Biology">Biology</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
